@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from models.database import engine
+from models.database import engine, Base
 from models.inventory import inventory_model
 from models.users import users_model
 
@@ -21,6 +21,6 @@ app.include_router(user_router.router)
 def hello():
     return {"hellow": "Fast-API"}
 
-
+Base.metadata.create_all(engine)
 inventory_model.Base.metadata.create_all(engine)
 users_model.Base.metadata.create_all(engine)
