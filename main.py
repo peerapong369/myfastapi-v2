@@ -22,5 +22,5 @@ def hello():
     return {"hellow": "Fast-API"}
 
 Base.metadata.create_all(engine)
-inventory_model.Base.metadata.create_all(engine)
-users_model.Base.metadata.create_all(engine)
+#inventory_model.Base.metadata.create_all(engine)
+#users_model.Base.metadata.create_all(engine)
